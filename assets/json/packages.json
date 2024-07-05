@@ -1,0 +1,797 @@
+{
+    "data": [
+        {
+            "region": "KAYIN",
+            "img": "assets/images/kayin/kyautkalat.jpg",
+            "label": "Label 1",
+            "detail": [
+                {"img" : "", "title" : ""}
+            ],
+            "description": "Region description Region description Region description Region description Region description Region description Region description ",
+            "regionPackages" : [
+                {
+                    "id": 1,                
+                    "title": "Mystical Caves of Hpa An",
+                    "destination": "Mystical",
+                    "duration": "2 days",
+                    "price": 150000.0,
+                    "rating": 4,
+                    "imgPath": "assets/images/kayin/bayint.jpg",
+                    "description": "Explore the captivating caves of Hpa An, including Yathaypyan Cave, Bat Cave, Mahar Sadan Cave, and Bayin Nyi Cave. Discover stunning stalactites, Buddha statues, and underground rivers in these natural wonders. This tour offers a unique blend of adventure and spirituality in Myanmar's picturesque Kayin State.",
+                    "images": 
+                    [
+                       "assets/images/kayin/h1.jpg",
+                       "assets/images/kayin/h2.jpg",
+                       "assets/images/kayin/h3.jpg",
+                       "assets/images/kayin/h4.jpg",
+                       "assets/images/kayin/h5.jpg",
+                       "assets/images/kayin/h6.jpg",
+                       "assets/images/kayin/h7.jpg",
+                       "assets/images/kayin/h8.jpg",
+                       "assets/images/kayin/h9.jpg",
+                       "assets/images/kayin/h10.jpg",
+                       "assets/images/kayin/h11.jpg"
+                      
+                    ],
+                    "inclusions": 
+                    [
+                        "Round-trip transportation from your hotel to all cave sites",
+                        "Experienced local guide for all cave explorations",
+                        "Provision of safety gear such as helmets and torches for cave exploration"
+                    ],
+                    "exclusions": 
+                    [
+                        "Souvenirs, additional snacks, and beverages not included in the provided meals",
+                        "Comprehensive travel insurance beyond the basic coverage included.",
+                        "Optional Activities"
+                    ]
+                },
+                {
+                    "id": 2,                
+                    "title": "Twin Peaks Adventure",
+                    "destination": "Twin",
+                    "duration": "1 days",
+                    "price": 120000.0,
+                    "rating": 3,
+                    "imgPath": "assets/images/kayin/zwe0.jpg",
+                    "description": "Embark on an exhilarating adventure with our hiking tour package to Zwekapin Mountain and KyaIn Mountain. Discover the breathtaking landscapes of these iconic peaks, where lush forests and panoramic vistas await. Our guided tour offers a perfect blend of challenge and serenity, making it ideal for nature enthusiasts and thrill-seekers alike. Enjoy well-marked trails, experienced guides, and the chance to explore the rich biodiversity of the region. Whether you're a seasoned hiker or a beginner, this unforgettable journey will leave you with lasting memories of Myanmar's natural beauty.",
+                    "images": 
+                    [
+                       "assets/images/kayin/zwe1.jpg",
+                       "assets/images/kayin/zwe2.jpg",
+                       "assets/images/kayin/zwe3.jpg",
+                       "assets/images/kayin/zwe4.jpg",
+                       "assets/images/kayin/zwe5.jpg",
+                       "assets/images/kayin/zwe6.jpg",
+                       "assets/images/kayin/zwe7.jpg",
+                       "assets/images/kayin/zwe8.jpg",
+                       "assets/images/kayin/zwe9.jpg",
+                       "assets/images/kayin/zwe10.jpg",
+                       "assets/images/kayin/zwe11.jpg",
+                       "assets/images/kayin/zwe14.jpg",
+                       "assets/images/kayin/zwe15.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Support team for assistance during the hike.",
+                        "Refreshment breaks with snacks and beverages during hikes",
+                        "Round-trip transportation from the meeting point to the hiking locations"
+                    ],
+                    "exclusions": 
+                    [
+                        "Personal travel insurance (though it's recommended for participants to purchase their own)",
+                        "Personal hiking gear such as boots, clothing, and daypacks if participants prefer their own equipment over rentals.",
+                        "Accommodation before the start date and after the end date of the tour package."
+                    ]
+                },
+                {
+                    "id": 3,                
+                    "title": "Discover the Beauty of ThaungYin",
+                    "destination": "Thaung Yin",
+                    "duration": "1 days",
+                    "price": 80000.0,
+                    "rating": 3,
+                    "imgPath": "assets/images/kayin/yin2.jpg",
+                    "description": "The Thaung Yin River, gracefully winding through Kayin State, is a vital lifeline for the region, offering both natural beauty and cultural significance. Flowing along the border between Myanmar and Thailand, this serene river is surrounded by lush greenery and picturesque landscapes, making it a haven for nature enthusiasts. The river supports local communities with its rich biodiversity and serves as an essential resource for agriculture and fishing. A journey along the Thaung Yin River offers a glimpse into the harmonious relationship between the river and the people who depend on it, making it a must-visit destination for those seeking tranquility and a deeper connection with nature.",
+                    "images": 
+                    [
+                       "assets/images/kayin/yin0.jpg",
+                       "assets/images/kayin/yin1.jpg",
+                       "assets/images/kayin/yin3.jpg",
+                       "assets/images/kayin/yin4.jpg",
+                       "assets/images/kayin/yin5.jpg",
+                       "assets/images/kayin/yin6.jpg",
+                       "assets/images/kayin/yin2.jpg",
+                       "assets/images/kayin/yin7.jpg"
+                        
+                    ],
+                    "inclusions": 
+                    [
+                        "Boat rides or cruises along the Thaung Yin River",
+                        "Guided tours of local villages, cultural sites, and natural attractions",
+                        "First aid kits and basic emergency supplies"
+                    ],
+                    "exclusions": 
+                    [
+                        "Items of a personal nature, such as additional snacks, drinks not provided during the tour, and souvenirs.",
+                        "Personal travel insurance (participants are advised to purchase their own)",
+                        "Tips for  support staff, which are often appreciated but not included."
+                    ]
+                },            
+                {
+                    "id": 4,                
+                    "title": "MaharSadan Exploration Tour",
+                    "destination": "Mahar Sadan ",
+                    "duration": "1 days",
+                    "price": 70000.0,
+                    "rating": 3,
+                    "imgPath": "assets/images/kayin/sadan0.jpg",
+                    "description": "Nestled in the heart of Kayin State, Mahar Sadan Cave is a breathtaking natural wonder and a significant cultural site.As you venture deeper, you'll discover a serene lake within the cave, offering boat rides that enhance the mystical experience. The cave is adorned with numerous Buddha statues and pagodas, reflecting its spiritual importance. Mahar Sadan Cave provides visitors with a unique blend of natural beauty and cultural richness, making it a must-visit destination in Myanmar",
+                    "images": 
+                    [
+                       "assets/images/kayin/sadan1.jpg",
+                       "assets/images/kayin/sadan2.jpg",
+                       "assets/images/kayin/sadan3.jpg",
+                       "assets/images/kayin/sadan4.jpg",
+                       "assets/images/kayin/sadan5.jpg",
+                       "assets/images/kayin/sadan6.jpg",
+                       "assets/images/kayin/sadan7.jpg",
+                       "assets/images/kayin/sadan8.jpg",
+                       "assets/images/kayin/sadan9.jpg",
+                       "assets/images/kayin/sadan10.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Round-trip transportation from the meeting point to the cave and other tour locations.",
+                        "Experienced and knowledgeable local guides for all activities.",
+                        "All necessary permits and entrance fees for Mahar Sadan Cave and other attractions."
+                    ],
+                    "exclusions": 
+                    [
+                       "Meals and drinks not explicitly mentioned as included in the itinerary",
+                        "Comprehensive travel insurance beyond the basic coverage included.",
+                        "Optional Activities"
+                    ]
+                }
+            ]  
+        },
+    
+        {
+            "region": "SHAN",
+            "img": "assets/images/shan/shanshan.jpg",
+            "label": "Label 1",
+            "description": "Region description ",
+            "regionPackages" : [
+                {
+                    "id": 1,                
+                    "title": "Shan State Highlights Tour",
+                    "destination": "Shan",
+                    "duration": "2 days",
+                    "price": 180000.0,
+                    "rating": 4,
+                    "imgPath": "assets/images/shan/pdo.jpg",
+                    "description": "Taunggyi, a bustling town known for its vibrant markets and Shan State cultural experiences. Journey onwards to Inle Lake, where floating gardens and stilted villages await amidst breathtaking mountain scenery. Immerse yourself in the unique lifestyle of the Intha people, famous for their leg-rowing technique and traditional crafts. Finally, venture to Kalaw, a serene hill station offering cool mountain air, lush landscapes, and opportunities for trekking amidst pine forests and hill tribe villages. This trip promises an unforgettable blend of Myanmar's natural beauty and rich cultural heritage.",
+                    "images": 
+                    [
+                        "assets/images/shan/tau1.jpg",
+                        "assets/images/shan/tau2.jpg",
+                        "assets/images/shan/tau3.jpg",
+                        "assets/images/shan/tau4.jpg",
+                        "assets/images/shan/tau5.jpg",
+                        "assets/images/shan/inlay2.jpg",
+                        "assets/images/shan/inlay3.jpg",
+                        "assets/images/shan/tau7.jpg",
+                        "assets/images/shan/tau8.jpg",
+                        "assets/images/shan/tau9.jpg",
+                        "assets/images/shan/tau10.jpg",
+                        "assets/images/shan/tau11.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Hotel based on Twin or Double sharing rooms with daily breakfast",
+                        "Ground transportation with private A/C vehicle during tour.",
+                        "Pure drinking water (01 bottle) and snow towel in sightseeing days"
+                    ],
+                    "exclusions": 
+                    [
+                        "Early check in & late checkout fees",
+                        "Travel insurance",
+                        "Gratuities (optional)"
+                    ]
+                },
+                {
+                    "id": 2,                
+                    "title": "Heho-Taunggyi Cultural Expedition",
+                    "destination": "Heho-Taunggyi",
+                    "duration": "2 days",
+                    "price": 120000.0,
+                    "rating": 3,
+                    "imgPath": "assets/images/shan/taungyi.jpg",
+                    "description": "Visit to Heho and Taung Gyi: Heho 5 days Market, Bawa than tha yar Bridge, Shan Tribal Museum, local market, Yat Taw Mu Pagoda – which features a large standing Buddha image in the South-western direction.",
+                    "images": 
+                    [
+                        "assets/images/shan/heho1.jpg",
+                        "assets/images/shan/heho2.jpg",
+                        "assets/images/shan/heho3.jpg",
+                        "assets/images/shan/heho4.jpg",
+                        "assets/images/shan/heho6.jpg",
+                        "assets/images/shan/heho7.jpg",
+                        "assets/images/shan/heho8.jpg",
+                        "assets/images/shan/heho9.jpg",
+                        "assets/images/shan/taungyi.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Sightseeing Program in Naung Shwe – Heho – Taung Gyi – Naung Shwe Full day with  Guide",
+                        "Tour Program Sightseeing with private air- condition and good experienced car driver",
+                        "Purify drinking water and snow Towel along in program"
+                    ],
+                    "exclusions": 
+                    [
+                        "Drinks, Meals, beverages, laundry, tips and other expense",
+                        "Travel insurance",
+                        "Gratuities (optional)"
+                    ]
+                },
+                {
+                    "id": 3,                
+                    "title": "Limestone Marvels: Pindaya Cave",
+                    "destination": "Limestone",
+                    "duration": "1 days",
+                    "price": 70000.0,
+                    "rating": 3,
+                    "imgPath": "assets/images/shan/pdy.jpg",
+                    "description": "The Pindaya Caves located next to the town of Pindaya, Shan State, Burma (Myanmar) are a Buddhist pilgrimage site and a tourist attraction located on a limestone ridge in the Myelat region. There are three caves on the ridge which runs north-south, but only the southern cave can be entered and explored. It is not known whether the other two penetrate for any extended distance into the hillside.08:00AM pick up to your hotel at Naung Shwe.",
+                    "images": 
+                    [
+                        "assets/images/shan/pin1.jpg",
+                        "assets/images/shan/pin2.jpg",
+                        "assets/images/shan/pin3.jpg",
+                        "assets/images/shan/pin4.jpg",
+                        "assets/images/shan/pin5.jpg",
+                        "assets/images/shan/pin7.jpg",
+                        "assets/images/shan/pin8.jpg",
+                        "assets/images/shan/pin9.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Comfortable vehicle for the journey to and from Pindaya.",
+                        "Knowledgeable guide to provide historical and cultural insights.",
+                        "Guidance on the best spots and times for photos."
+                    ],
+                    "exclusions": 
+                    [
+                        "personal purchases such as souvenirs, additional snacks, or beverages not listed in the itinerary.",
+                        "optional activities that are not part of the standard itinerary "
+                    ]
+                },
+                {
+                    "id": 4,                
+                    "title": "Nan Mon Gyi Escape",
+                    "destination": "Nan Mon Gyi",
+                    "duration": "Day Trip",
+                    "price": 60000.0,
+                    "rating": 4,
+                    "imgPath": "assets/images/shan/nmg.jpg",
+                    "description": "This tour package offers a serene escape into nature's splendor. Journey through lush landscapes and quaint villages to reach the majestic waterfall, where cascading waters create a tranquil oasis. Enjoy a refreshing dip in the clear pools, explore the surrounding forest, and soak in the breathtaking scenery. Perfect for nature lovers and adventure seekers, this tour provides a rejuvenating retreat in one of Myanmar's hidden gems.",
+                    "images": 
+                    [
+                       "assets/images/shan/nmg1.jpg",
+                       "assets/images/shan/nmg2.jpg",
+                       "assets/images/shan/nmg3.jpg",
+                       "assets/images/shan/nmg4.jpg",
+                       "assets/images/shan/nmg5.jpg",
+                       "assets/images/shan/nmg6.jpg",
+                       "assets/images/shan/nmg7.jpg",
+                       "assets/images/shan/nmg8.jpg",
+                       "assets/images/shan/nmg9.jpg",
+                       "assets/images/shan/nmg10.jpg"
+                 
+                    ],
+                    "inclusions": 
+                    [
+                        "Transportation from the starting point to Nan Mon Gyi Waterfall with an experienced local guide",
+                        "Lunch with local delicacies and refreshments at the waterfall site.",
+                         "Nature Activities and Exploration"
+                    ],
+                    "exclusions": 
+                    [
+                        "Travel Insurance",
+                        "Personal Expenses",
+                        "Gratuities (optional)"
+                    ]
+                }
+            ]
+        },
+        {
+            "region": "MON",
+            "img": "assets/images/mon/monmon.jpg",
+            "label": "Label 1",
+            "description": "Region description",
+            "regionPackages" : [
+                {
+                    "id": 1,                
+                    "title": "Mystic Mon Pagoda Journey",
+                    "destination": "Mystic Mon Pagoda ",
+                    "duration": "3 days",
+                    "price": 200000.0,
+                    "rating": 4,
+                    "imgPath": "assets/images/mdy/pag0.jpg",
+                    "description": "Begin a spiritually enriching journey through Mon State, Myanmar, where ancient traditions and stunning architecture come to life. Visit iconic pagodas such as the awe-inspiring Kyaiktiyo Pagoda (Golden Rock), the serene Mahamuni Pagoda in Mawlamyine, and the impressive Win Sein Taw Ya (Laying Buddha). Explore the picturesque Kyauk Ka Lat Pagoda and marvel at the towering Shwemawdaw Pagoda. Immerse yourself in local culture, savor regional cuisine, and experience the profound tranquility and beauty of these sacred sites. This tour promises unforgettable memories of Myanmar's rich spiritual heritage.",
+                    "images": 
+                    [
+                       "assets/images/mdy/pag1.jpg",
+                       "assets/images/mdy/pag2.jpg",
+                       "assets/images/mdy/pag3.jpg",
+                       "assets/images/mdy/pag4.jpg",
+                       "assets/images/mdy/pag5.jpg",
+                       "assets/images/mdy/pag6.jpg",
+                       "assets/images/mdy/pag7.jpg",
+                       "assets/images/mdy/pag8.jpg",
+                       "assets/images/mdy/pag9.jpg",
+                       "assets/images/mdy/pag10.jpg",
+                       "assets/images/mdy/pag11.jpg",
+                       "assets/images/mdy/pag12.jpg"
+
+                     
+                    ],
+                    "inclusions": 
+                    [
+                        "Tour Program Sightseeing with private air- condition and good experienced car driver",
+                        "All entrance fees to pagodas and attractions",
+                        "Hotel based on Twin or Double sharing rooms with daily breakfast."
+                    ],
+                    "exclusions": 
+                    [
+                        "Drinks, Meals, beverages, laundry, tips and other expense",
+                        "Items of personal nature such as travel accessories, additional clothing, etc.",
+                        "Professional photographer to capture memorable moments."
+                    ]
+                },
+                {
+                    "id": 2,                
+                    "title": "Artisans village of Mon State",
+                    "destination": "Artisans ",
+                    "duration": "1 days",
+                    "price": 80000.0,
+                    "rating": 3,
+                    "imgPath": "assets/images/mon/mon1.jpg",
+                    "description": "Explore Black Board Village, renowned for its meticulous artisanal craftsmanship in creating essential blackboards for Myanmar's educational system. Meanwhile, Pipe Village invites you to discover the intricate artistry of bamboo pipe-making, deeply rooted in local heritage and everyday life. These serene rural escapes in Myanmar offer firsthand experiences of traditional craftsmanship, alongside the warm hospitality of local communities",
+                    "images": 
+                    [
+                        "assets/images/mon/mon1.jpg",
+                        "assets/images/mon/mon2.jpg",
+                        "assets/images/mon/mon3.jpg",
+                        "assets/images/mon/mon4.jpg",
+                        "assets/images/mon/mon5.jpg",
+                        "assets/images/mon/mon6.jpg",
+                        "assets/images/mon/mon7.jpg",
+                        "assets/images/mon/mon8.jpg",
+                        "assets/images/mon/mon9.jpg",
+                        "assets/images/mon/mon10.jpg",
+                        "assets/images/mon/mon11.jpg"
+                       
+                    ],
+                    "inclusions": 
+                    [
+                        "Visits to Local Homes or Workshops",
+                        "Visit local markets where these handmade crafts are sold alongside other local products.",
+                        "Experienced local guide for all cave explorations."
+                    ],
+                    "exclusions": 
+                    [
+                        "Disruptive Photography or Intrusive Behavior:",
+                        "Commercial Exploitation",
+                        "Souvenirs, additional snacks, and beverages not included in the provided meals"
+                    ]
+                },
+                
+                {
+                    "id": 3,                
+                    "title": "Kayon Cave Nature Escape",
+                    "destination": "Kayon Cave",
+                    "duration": "1 days",
+                    "price": 70000.0,
+                    "rating": 3,
+                    "imgPath":  "assets/images/mon/kayon0.jpg",
+                    "description": "Explore the enchanting Kayon Cave, located near the Zathapyin Bridge in Mawlamyine Township, Mon State. This hidden gem offers a serene and mystical experience with its stunning stalactites and stalagmites formations. Perfect for adventurers and nature lovers, Kayon Cave is a must-visit destination to discover the natural beauty and cultural heritage of Mon State.",
+                    "images": 
+                    [
+                       "assets/images/mon/kayon1.jpg",
+                        "assets/images/mon/kayon2.jpg",
+                        "assets/images/mon/kayon3.jpg",
+                        "assets/images/mon/kayon4.jpg",
+                        "assets/images/mon/kayon5.jpg",
+                        "assets/images/mon/kayon6.jpg",
+                        "assets/images/mon/kayon7.jpg",
+                        "assets/images/mon/kayon8.jpg",
+                        "assets/images/mon/kayon9.jpg",
+                        "assets/images/mon/kayon10.jpg",
+                        "assets/images/mon/kayon11.jpg",
+                        "assets/images/mon/kayon12.jpg",
+                        "assets/images/mon/kayon13.jpg"
+                     
+                    ],
+                    "inclusions": 
+                    [
+                        "Round-trip transportation from the pick-up point to Kayon Cave.",
+                        "Experienced local guide with in-depth knowledge of the cave's history and geology.",
+                        "All entrance fees to Kayon Cave and any additional sites included in the tour."
+                    ],
+                    "exclusions": 
+                    [
+                        " souvenirs, additional snacks, and beverages not included in the tour package.",
+                        "Items of personal nature such as travel accessories, additional clothing, etc.",
+                        "Professional photographer to capture memorable moments."
+                    ]
+                },
+                {
+                    "id": 4,                
+                    "title": " Phar Baung Cave Excursion",
+                    "destination": "Phar Baung Cave ",
+                    "duration": "1 days",
+                    "price": 70000.0,
+                    "rating": 3,
+                    "imgPath": "assets/images/mon/phar0.jpg",
+                    "description": "Visit  Phar Baung Cave in Waban Kone Village, a short 45-minute drive from Mawlamyine. This accessible cave, with its beautiful stone formations and columns, offers an unforgettable experience. The cave's open-ended structure allows for full exploration, making it a must-visit for nature and adventure enthusiasts.",
+                    "images": 
+                    [
+                        "assets/images/mon/phar1.jpg",
+                        "assets/images/mon/phar2.jpg",
+                        "assets/images/mon/phar3.jpg",
+                        "assets/images/mon/phar4.jpg",
+                        "assets/images/mon/phar6.jpg",
+                        "assets/images/mon/phar7.jpg",
+                        "assets/images/mon/phar8.jpg",
+                        "assets/images/mon/phar9.jpg",
+                        "assets/images/mon/phar10.jpg",
+                        "assets/images/mon/phar11.jpg",
+                        "assets/images/mon/phar12.jpg",
+                        "assets/images/mon/phar13.jpg"
+                       
+                    ],
+                    "inclusions": 
+                    [
+                        "Round-trip transportation from Mawlamyine to Phar Baung Cave.",
+                        "Guided exploration inside Phar Baung Cave, highlighting notable formations",
+                        "Necessary safety gear such as helmets and flashlights for cave exploration."
+                    ],
+                    "exclusions": 
+                    [
+                        "Any personal purchases, souvenirs, or additional snacks beyond those provided.",
+                        "Any activities or excursions not explicitly mentioned in the tour itinerary.",
+                        "Any additional requests or accommodations that incur extra costs."
+                    ]
+                }
+            ]
+        },
+
+        
+
+
+        {
+            "region": "BAGAN",
+            "img": "assets/images/bagan/bagan.jpg",
+            "label": "Label 1",
+            "description": "Region description",
+            "regionPackages" : [
+                {
+                    "id": 1,                
+                    "title": "E Bike Tour in Bagan",
+                    "destination": "E Bike Tour in Bagan ",
+                    "duration": "1 days",
+                    "price": 50000.0,
+                    "rating": 4,
+                    "imgPath": "assets/images/bagan/e1.jpg",
+                    "description": "Book this  tour of the ancient city of Bagan by E Bike and explore the magnificent temples and ruins with the flexibility of being able to stop at any time to take photos and embrace the surroundings. Visit some of the famous yet lesser known temples scattered around the countryside and be informed about their history and Burmese culture. Truly a memorable experience as you ride effortlessly along dirt roads and surround yourself with the history of this sacred land",
+                    "images": 
+                    [
+                       "assets/images/bagan/e2.jpg",
+                       "assets/images/bagan/e3.jpg",
+                       "assets/images/bagan/e4.jpg",
+                       "assets/images/bagan/e5.jpg",
+                       "assets/images/bagan/e6.jpg",
+                       "assets/images/bagan/e7.jpg",
+                       "assets/images/bagan/e8.jpg",
+                       "assets/images/bagan/e9.jpg",
+                       "assets/images/bagan/e10.jpg",
+                       "assets/images/bagan/e11.jpg"                   
+                    ],
+                    "inclusions": 
+                    [
+                        "Use of E Bike",
+                        "Hotel pickup and drop-off",
+                        "Professional guide"
+                    ],
+                    "exclusions": 
+                    [
+                        "Drinks, Meals, beverages, laundry, tips and other expense",
+                        "Items of personal nature such as travel accessories, additional clothing, etc.",
+                        "Gratuities (optional)"
+                    ]
+                },
+                {
+                    "id": 2,                
+                    "title": "Ancient Temples and Sacred Peaks",
+                    "destination": "bahan",
+                    "duration": "3 days",
+                    "price": 200000.0,
+                    "rating": 5,
+                    "imgPath": "assets/images/bagan/po12.jpg",
+                    "description": "Discover the enchanting beauty of Myanmar with our Bagan to Mount Popa tour package. Begin your journey in the ancient city of Bagan, famous for its stunning temples and pagodas. From there, travel to the mystical Mount Popa, an extinct volcano and sacred pilgrimage site. Ascend to the summit to explore the Popa Taungkalat Monastery, perched atop a volcanic plug, offering breathtaking panoramic views. This tour combines cultural immersion, natural beauty, and spiritual experiences, making it an unforgettable adventure.",
+                    "images": 
+                    [
+                        "assets/images/bagan/po1.jpg",
+                        "assets/images/bagan/po2.jpg",
+                        "assets/images/bagan/po3.jpg",
+                        "assets/images/bagan/po4.jpg",
+                        "assets/images/bagan/po5.jpg",
+                        "assets/images/bagan/po6.jpg",
+                        "assets/images/bagan/po7.jpg",
+                        "assets/images/bagan/po8.jpg",
+                        "assets/images/bagan/po9.jpg",
+                        "assets/images/bagan/po10.jpg",
+                        "assets/images/bagan/po11.jpg"
+                       
+                    ],
+                    "inclusions": 
+                    [
+                        "Hotel based on Twin or Double sharing rooms with daily breakfast",
+                        "Ground transportation with private A/C vehicle during tour",
+                        "Entrance & admission fee as per itinerary"
+                    ],
+                    "exclusions": 
+                    [
+                        "Souvenirs, additional snacks, and beverages not included in the provided meals",
+                        "Travel Insurance",
+                        "Gratuities (optional)"
+                    ]
+                }               
+            ]
+        },
+
+        {
+            "region": "MANDALAY",
+            "img": "assets/images/mdy/mdy4.jpg",
+            "label": "Label 1",
+            "description": "Region description",
+            "regionPackages" : [
+                {
+                    "id": 1,                
+                    "title": "Pan Laung Serenity Stay",
+                    "destination": "Pan Laung ",
+                    "duration": "2 days",
+                    "price": 150000.0,
+                    "rating": 5,
+                    "imgPath": "assets/images/mdy/pl0.jpg",
+                    "description": "Discover the serene beauty of Pan Laung Eco Lodge with our exclusive tour package. Nestled in the heart of Myanmar's lush forests, this eco-friendly lodge offers a perfect escape for nature enthusiasts and cultural explorers alike. Immerse yourself in the tranquility of sustainable living, enjoy comfortable accommodations crafted from local materials, and engage in traditional activities such as crafts and cooking. Explore the stunning natural landscape with guided hikes and river excursions. Our tour package ensures a harmonious blend of relaxation, adventure, and cultural enrichment, making your stay at Pan Laung Eco Lodge truly unforgettable",
+                    "images": 
+                    [
+                        "assets/images/mdy/pl1.jpg",
+                        "assets/images/mdy/pl2.jpg",
+                        "assets/images/mdy/pl3.jpg",
+                        "assets/images/mdy/pl4.jpg",
+                        "assets/images/mdy/pl5.jpg",
+                        "assets/images/mdy/pl6.jpg",
+                        "assets/images/mdy/pl7.jpg",
+                        "assets/images/mdy/pl8.jpg",
+                        "assets/images/mdy/pl9.jpg",
+                        "assets/images/mdy/pl10.jpg",
+                        "assets/images/mdy/pl11.jpg",
+                        "assets/images/mdy/pl12.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Enjoy boat rides or kayaking on nearby rivers",
+                        "Explore the surrounding forests, rivers, and natural landscapes with knowledgeable guides.",
+                        "Healthy and delicious meals prepared with locally sourced ingredients, offering a taste of regional cuisine."
+                    ],
+                    "exclusions": 
+                    [
+                        "Any activities or excursions not included in the standard tour package but offered as optional upgrades or add-ons.er",
+                        "cost of alcoholic drinks or beverages beyond standard meals",
+                        "additional snacks or beverages, laundry services, and personal purchases."
+                    ]
+                },
+                {
+                    "id": 2,                
+                    "title": "Sagaing Cultural Odyssey",
+                    "destination": "Sagaing",
+                    "duration": "1 days",
+                    "price": 120000.0,
+                    "rating": 4,
+                    "imgPath": "assets/images/mdy/sag0.jpg",
+                    "description": "Immerse yourself in the timeless beauty and spiritual heritage of Sagaing with our exclusive tour package. Known for its stunning landscapes and sacred sites, Sagaing offers an unparalleled glimpse into Myanmar's rich cultural tapestry. Visit the iconic Soon U Ponya Shin Pagoda and the tranquil U Min Thonze Caves, marvel at the panoramic views from Sagaing Hill, and experience the daily life of local monks and artisans. This tour combines history, spirituality, and cultural immersion, providing an unforgettable journey through one of Myanmar's most cherished regions.",
+                    "images": 
+                    [
+                      "assets/images/mdy/sag1.jpg",
+                      "assets/images/mdy/sag2.jpg",
+                      "assets/images/mdy/sag3.jpg",
+                      "assets/images/mdy/sag4.jpg",
+                      "assets/images/mdy/sag5.jpg",
+                      "assets/images/mdy/sag6.jpg",
+                      "assets/images/mdy/sag7.jpg",
+                      "assets/images/mdy/sag8.jpg",
+                      "assets/images/mdy/sag9.jpg",
+                      "assets/images/mdy/sag10.jpg",
+                      "assets/images/mdy/sag11.jpg",
+                      "assets/images/mdy/sag12.jpg",
+                      "assets/images/mdy/sag13.jpg"
+
+                    ],
+                    "inclusions": 
+                    [
+                        "Knowledgeable local guides who provide insights into the history, culture, and spiritual significance of Sagaing's landmarks.",
+                        "Guided photo tours to capture the stunning scenery and historical sites.",
+                        "Comfortable transportation for all included activities and excursions."
+                    ],
+                    "exclusions": 
+                    [
+                        "Meals and drinks not explicitly mentioned as included in the itinerary.",
+                        "Personal Expenses"
+                    ]
+                },
+                {
+                    "id": 3,                
+                    "title": "Mandalay Majesty Tour",
+                    "destination": "Mandalay",
+                    "duration": "2 days",
+                    "price": 180000.0,
+                    "rating": 3,
+                    "imgPath": "assets/images/mdy/md0.jpg",
+                    "description": "Discover the cultural and historical treasures of Myanmar's last royal capital with our Mandalay Tour Package. Nestled on the banks of the Irrawaddy River, Mandalay is a vibrant city rich in tradition and history. This tour offers an immersive experience with visits to iconic landmarks such as the Mandalay Palace, Kuthodaw Pagoda, and the ancient teakwood U Bein Bridge. Explore the bustling markets, witness traditional craftsmanship, and enjoy panoramic views from Mandalay Hill. Our Mandalay Tour Package ensures a memorable journey through the heart of Myanmar's cultural heritage, blending history, spirituality, and local charm.",
+                    "images": 
+                    [
+                       "assets/images/mdy/mdyhill.jpg",
+                       "assets/images/mdy/md1.jpg",
+                       "assets/images/mdy/md2.jpg",
+                       "assets/images/mdy/md3.jpg",
+                       "assets/images/mdy/md4.jpg",
+                       "assets/images/mdy/md5.jpg",
+                       "assets/images/mdy/md6.jpg",
+                       "assets/images/mdy/md7.jpg",
+                       "assets/images/mdy/md8.jpg",
+                       "assets/images/mdy/md9.jpg",
+                       "assets/images/mdy/md10.jpg",
+                       "assets/images/mdy/md11.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "One-night stay in a comfortable hotel ",
+                        "Experienced local guide for cultural and historical tours.",
+                        "All entrance fees for attractions and workshops mentioned in the itinerary."
+                    ],
+                    "exclusions": 
+                    [
+                        "souvenirs, laundry services, and personal purchases.",
+                        "Meals and drinks not explicitly mentioned as included in the itinerary"
+                    
+                    ]
+                },
+                {
+                    "id": 4,                
+                    "title": "Pyin Oo Lwin Highland Escape",
+                    "destination": "Pyin Oo Lwin",
+                    "duration": "2 days",
+                    "price": 100000.0,
+                    "rating": 5,
+                    "imgPath": "assets/images/mdy/mm2.jpg",
+                    "description": " Explore the scenic hill town of Pyin Oo Lwin with our captivating tour package. Nestled in the Shan Highlands, Pyin Oo Lwin (formerly Maymyo) offers a delightful retreat with its cool climate, colonial architecture, and lush gardens. Discover botanical wonders at the National Kandawgyi Gardens, visit historic landmarks like the Candacraig Hotel, and experience the local culture at the bustling markets. Enjoy horse-drawn carriage rides, explore waterfalls, and savor local delicacies. Our Pyin Oo Lwin Tour Package promises a blend of relaxation, adventure, and cultural immersion in this charming Myanmar town.",
+                    "images": 
+                    [
+                       "assets/images/mdy/mm1.jpg",
+                       "assets/images/mdy/mm2.jpg",
+                       "assets/images/mdy/mm3.jpg",
+                       "assets/images/mdy/mm4.jpg",
+                       "assets/images/mdy/mm5.jpg",
+                       "assets/images/mdy/mm6.jpg",
+                       "assets/images/mdy/mm7.jpg",
+                       "assets/images/mdy/mm8.jpg",
+                       "assets/images/mdy/mm9.jpg",
+                       "assets/images/mdy/mm10.jpg",
+                       "assets/images/mdy/mm11.jpg",
+                       "assets/images/mdy/mm12.jpg",
+                       "assets/images/mdy/mm13.jpg",
+                       "assets/images/mdy/mm14.jpg",
+                       "assets/images/mdy/mm15.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Experienced local guide for cultural and natural excursions",
+                        "All entrance fees for attractions and workshops mentioned in the itinerary.",
+                        "One-night stay in a comfortable hotel or guesthouse"
+                    ],
+                    "exclusions": 
+                    [
+                        "souvenirs, additional snacks or beverages, laundry services, and personal purchases.",
+                        "Meals and drinks not explicitly mentioned as included in the itinerary",
+                         "Any activities or excursions not explicitly included in the tour package but offered as optional upgrades or add-ons."
+                    ]
+                }
+            ]
+        },
+        {
+            "region": "YANGON",
+            "img": "assets/images/ygn/ygno.jpg",
+            "label": "Label 1",
+            "description": "Region description",
+            "regionPackages" : [
+                {
+                    "id": 1,                
+                    "title": "Yangon Cityscape Tour",
+                    "destination": "Yangon Cityscape ",
+                    "duration": " 2 days",
+                    "price": 250000.0,
+                    "rating": 5,
+                    "imgPath": "assets/images/ygn/ygno.jpg",
+                    "description": "Discover the vibrant essence of Yangon with our 2-days, 1-night city tour. Immerse yourself in the rich history and culture of Myanmar's largest city, visiting iconic landmarks like the awe-inspiring Shwedagon Pagoda, the historic Sule Pagoda, and the bustling Bogyoke Aung San Market. Experience the local way of life on the Yangon Circular Train and enjoy serene moments by Kandawgyi Lake. With comfortable accommodation, guided tours, and delectable Burmese cuisine, this tour offers a perfect blend of exploration and relaxation. Join us for an unforgettable journey through the heart of Yangon!",
+                    "images": 
+                    [
+                        "assets/images/ygn/ygn1.jpg",
+                        "assets/images/ygn/ygn2.jpg",
+                        "assets/images/ygn/ygn3.jpg",
+                        "assets/images/ygn/ygn4.jpg",
+                        "assets/images/ygn/ygn5.jpg",
+                        "assets/images/ygn/ygn6.jpg",
+                        "assets/images/ygn/ygn7.jpg",
+                        "assets/images/ygn/ygn8.jpg",
+                        "assets/images/ygn/ygn10.jpg",
+                        "assets/images/ygn/ygn11.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Hotel based on Twin or Double sharing rooms with daily breakfast",
+                        "Transportation within Yangon in an air-conditioned vehicle",
+                        "Entrance fees to all mentioned sites and attractions"
+                    ],
+                    "exclusions": 
+                    [
+                        "Personal expenses (e.g., souvenirs, additional meals, drinks)",
+                        "Any meals or activities not specified in the itinerary"
+                    ]
+                },
+                {
+                    "id": 2,                
+                    "title": "Bago Heritage Trail",
+                    "destination": "Bago Heritage Traily",
+                    "duration": "2 days",
+                    "price": 100000.0,
+                    "rating": 5,
+                    "imgPath": "assets/images/ygn/pago0.jpg",
+                    "description": "Embark on an enchanting day tour to Bago, the ancient city of the Mon Kingdom. Just a short drive from Yangon, this tour offers a deep dive into Myanmar's rich cultural heritage. Visit the towering Shwemawdaw Pagoda, marvel at the grandeur of the Kanbawzathadi Palace, and be awed by the massive Shwethalyaung Reclining Buddha. Explore the unique Kyaik Pun Pagoda with its Four Seated Buddha statues, and enjoy panoramic views from the Hintha Gon Pagoda. Experience local life at a vibrant market and savor traditional Burmese cuisine. This  adventure is perfect for history enthusiasts and cultural explorers alike.",
+                    "images": 
+                    [
+                        
+                      "assets/images/ygn/pago1.jpg",
+                      "assets/images/ygn/pago2.jpg",
+                      "assets/images/ygn/pago3.jpg",
+                      "assets/images/ygn/pago4.jpg",
+                      "assets/images/ygn/pago5.jpg",
+                      "assets/images/ygn/pago6.jpg",   
+                      "assets/images/ygn/pago7.jpg",
+                      "assets/images/ygn/pago8.jpg",
+                      "assets/images/ygn/pago9.jpg",
+                      "assets/images/ygn/pago10.jpg",
+                      "assets/images/ygn/pago11.jpg",
+                      "assets/images/ygn/pago12.jpg"
+                    ],
+                    "inclusions": 
+                    [
+                        "Include comfortable transportation from Yangon to Bago and back, ensuring convenience and safety for participants.",
+                        "Experienced local guide for all cave explorations.",
+                        " Include meals that offer a taste of local cuisine"
+                    ],
+                    "exclusions": 
+                    [
+                       "souvenirs, personal shopping, and additional snacks or drinks outside of included meals.",
+                        "Any activities or excursions not explicitly included in the tour package but offered as optional upgrades or add-ons.",
+                        "Non-Pagoda Related Excursions"
+                    ]
+                }
+               
+            ]
+        }
+    ]
+}
+
+  

@@ -1,0 +1,381 @@
+name: travel_directory
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  get:
+  flutter:
+    sdk: flutter
+  badges: ^3.0.2 
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.6
+  readmore: ^3.0.0
+  flutter_staggered_grid_view: ^0.4.0
+  animate_do: ^3.3.4
+  device_preview: ^1.2.0
+  carousel_slider: ^4.2.1
+  sqflite:
+  path: 
+  logger: ^1.0.0
+  sqflite_common_ffi: ^2.0.0
+  flutter_session_manager: ^1.0.3
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_svg: ^1.0.3
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^3.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:      
+    - assets/images/logo.png
+    - assets/images/logo_1.gif
+    - assets/images/background.jpg
+    - assets/images/shwedagon.jpg
+    - assets/images/shan/shanshan.jpg
+    - assets/images/shan/inlay.jpg
+    - assets/images/shan/inlay2.jpg
+    - assets/images/shan/inlay3.jpg
+    - assets/images/shan/taungyi.jpg
+    - assets/images/shan/pdo.jpg
+    - assets/images/shan/pdy.jpg
+    - assets/images/shan/syp.jpg
+    - assets/images/shan/gt.jpg
+    - assets/images/shan/nmg.jpg
+    - assets/images/shan/shanregion.jpg
+    - assets/images/shan/heho1.jpg
+    - assets/images/shan/heho2.jpg
+    - assets/images/shan/heho3.jpg
+    - assets/images/shan/heho4.jpg
+    - assets/images/shan/heho6.jpg
+    - assets/images/shan/heho7.jpg
+    - assets/images/shan/heho8.jpg
+    - assets/images/shan/heho9.jpg
+    - assets/images/shan/pin1.jpg
+    - assets/images/shan/pin2.jpg
+    - assets/images/shan/pin3.jpg
+    - assets/images/shan/pin4.jpg
+    - assets/images/shan/pin5.jpg
+    - assets/images/shan/pin7.jpg
+    - assets/images/shan/pin8.jpg
+    - assets/images/shan/pin9.jpg
+    - assets/images/shan/tauu.jpg
+    - assets/images/shan/tau1.jpg
+    - assets/images/shan/tau2.jpg
+    - assets/images/shan/tau3.jpg
+    - assets/images/shan/tau4.jpg
+    - assets/images/shan/tau5.jpg
+    - assets/images/shan/tau7.jpg
+    - assets/images/shan/tau8.jpg
+    - assets/images/shan/tau9.jpg
+    - assets/images/shan/tau10.jpg
+    - assets/images/shan/tau11.jpg
+    - assets/images/shan/nmg1.jpg
+    - assets/images/shan/nmg2.jpg
+    - assets/images/shan/nmg3.jpg
+    - assets/images/shan/nmg4.jpg
+    - assets/images/shan/nmg5.jpg
+    - assets/images/shan/nmg6.jpg
+    - assets/images/shan/nmg7.jpg
+    - assets/images/shan/nmg8.jpg
+    - assets/images/shan/nmg9.jpg
+    - assets/images/shan/nmg10.jpg
+    - assets/images/mdy/mdy1.jpg
+    - assets/images/mdy/mdy2.jpg
+    - assets/images/mdy/mdy3.jpg
+    - assets/images/mdy/mdy4.jpg
+    - assets/images/mdy/pl0.jpg
+    - assets/images/mdy/pl1.jpg
+    - assets/images/mdy/pl2.jpg
+    - assets/images/mdy/pl3.jpg
+    - assets/images/mdy/pl4.jpg
+    - assets/images/mdy/pl5.jpg
+    - assets/images/mdy/pl6.jpg
+    - assets/images/mdy/pl7.jpg
+    - assets/images/mdy/pl8.jpg
+    - assets/images/mdy/pl9.jpg
+    - assets/images/mdy/pl10.jpg
+    - assets/images/mdy/pl11.jpg
+    - assets/images/mdy/pl12.jpg
+    - assets/images/mdy/sag0.jpg
+    - assets/images/mdy/sag1.jpg
+    - assets/images/mdy/sag2.jpg
+    - assets/images/mdy/sag3.jpg
+    - assets/images/mdy/sag4.jpg
+    - assets/images/mdy/sag5.jpg
+    - assets/images/mdy/sag6.jpg
+    - assets/images/mdy/sag7.jpg
+    - assets/images/mdy/sag8.jpg
+    - assets/images/mdy/sag9.jpg
+    - assets/images/mdy/sag10.jpg
+    - assets/images/mdy/sag11.jpg
+    - assets/images/mdy/sag12.jpg
+    - assets/images/mdy/sag13.jpg
+    - assets/images/mdy/md0.jpg
+    - assets/images/mdy/md1.jpg
+    - assets/images/mdy/md2.jpg
+    - assets/images/mdy/md3.jpg
+    - assets/images/mdy/md4.jpg
+    - assets/images/mdy/md5.jpg
+    - assets/images/mdy/md6.jpg
+    - assets/images/mdy/md7.jpg
+    - assets/images/mdy/md8.jpg
+    - assets/images/mdy/md9.jpg
+    - assets/images/mdy/md10.jpg
+    - assets/images/mdy/md11.jpg
+    - assets/images/mdy/mm0.jpg
+    - assets/images/mdy/mm1.jpg
+    - assets/images/mdy/mm2.jpg
+    - assets/images/mdy/mm3.jpg
+    - assets/images/mdy/mm4.jpg
+    - assets/images/mdy/mm5.jpg
+    - assets/images/mdy/mm6.jpg
+    - assets/images/mdy/mm7.jpg
+    - assets/images/mdy/mm8.jpg
+    - assets/images/mdy/mm9.jpg
+    - assets/images/mdy/mm10.jpg
+    - assets/images/mdy/mm11.jpg
+    - assets/images/mdy/mm12.jpg
+    - assets/images/mdy/mm13.jpg
+    - assets/images/mdy/mm14.jpg
+    - assets/images/mdy/mm15.jpg
+    - assets/images/ygn/ygn.jpg
+    - assets/images/bagan/nlogo.png
+    - assets/images/bagan/nnlogo.jpg
+    - assets/images/bagan/bagan.jpg
+    - assets/images/bagan/e1.jpg
+    - assets/images/bagan/e2.jpg
+    - assets/images/bagan/e3.jpg
+    - assets/images/bagan/e4.jpg
+    - assets/images/bagan/e5.jpg
+    - assets/images/bagan/e6.jpg
+    - assets/images/bagan/e7.jpg
+    - assets/images/bagan/e8.jpg
+    - assets/images/bagan/e9.jpg
+    - assets/images/bagan/e10.jpg
+    - assets/images/bagan/e11.jpg
+    - assets/images/bagan/po12.jpg
+    - assets/images/bagan/po1.jpg
+    - assets/images/bagan/po2.jpg
+    - assets/images/bagan/po3.jpg
+    - assets/images/bagan/po4.jpg
+    - assets/images/bagan/po5.jpg
+    - assets/images/bagan/po6.jpg
+    - assets/images/bagan/po7.jpg
+    - assets/images/bagan/po8.jpg
+    - assets/images/bagan/po9.jpg
+    - assets/images/bagan/po10.jpg
+    - assets/images/bagan/po11.jpg
+    - assets/images/myeik/myeik1.jpg
+    - assets/images/kayin/kayinstate.jpg
+    - assets/images/kayin/bayint.jpg
+    - assets/images/kayin/kawkataung.jpg
+    - assets/images/kayin/kyautkalat.jpg
+    - assets/images/kayin/lumbini.jpg
+    - assets/images/kayin/kyonehtaw.jpg
+    - assets/images/kayin/h1.jpg
+    - assets/images/kayin/h2.jpg
+    - assets/images/kayin/h3.jpg
+    - assets/images/kayin/h4.jpg
+    - assets/images/kayin/h5.jpg
+    - assets/images/kayin/h6.jpg
+    - assets/images/kayin/h7.jpg
+    - assets/images/kayin/h8.jpg
+    - assets/images/kayin/h9.jpg
+    - assets/images/kayin/h10.jpg
+    - assets/images/kayin/h11.jpg
+    - assets/images/kayin/zwe0.jpg
+    - assets/images/kayin/zwe1.jpg
+    - assets/images/kayin/zwe2.jpg
+    - assets/images/kayin/zwe3.jpg
+    - assets/images/kayin/zwe4.jpg
+    - assets/images/kayin/zwe5.jpg
+    - assets/images/kayin/zwe6.jpg
+    - assets/images/kayin/zwe7.jpg
+    - assets/images/kayin/zwe8.jpg
+    - assets/images/kayin/zwe9.jpg
+    - assets/images/kayin/zwe10.jpg
+    - assets/images/kayin/zwe11.jpg
+    - assets/images/kayin/zwe13.jpg
+    - assets/images/kayin/zwe14.jpg
+    - assets/images/kayin/zwe15.jpg
+    - assets/images/kayin/yin0.jpg
+    - assets/images/kayin/yin1.jpg
+    - assets/images/kayin/yin2.jpg
+    - assets/images/kayin/yin3.jpg
+    - assets/images/kayin/yin4.jpg
+    - assets/images/kayin/yin5.jpg
+    - assets/images/kayin/yin6.jpg
+    - assets/images/kayin/yin7.jpg
+    - assets/images/kayin/sadan0.jpg
+    - assets/images/kayin/sadan1.jpg
+    - assets/images/kayin/sadan2.jpg
+    - assets/images/kayin/sadan3.jpg
+    - assets/images/kayin/sadan4.jpg
+    - assets/images/kayin/sadan5.jpg
+    - assets/images/kayin/sadan6.jpg
+    - assets/images/kayin/sadan7.jpg
+    - assets/images/kayin/sadan8.jpg
+    - assets/images/kayin/sadan9.jpg
+    - assets/images/kayin/sadan10.jpg
+    - assets/images/mon/monmon.jpg
+    - assets/images/mon/mon.jpg
+    - assets/images/mon/mon1.jpg
+    - assets/images/mon/mon2.jpg
+    - assets/images/mon/mon3.jpg
+    - assets/images/mon/mon4.jpg
+    - assets/images/mon/mon5.jpg
+    - assets/images/mon/mon6.jpg
+    - assets/images/mon/mon7.jpg
+    - assets/images/mon/mon8.jpg
+    - assets/images/mon/mon9.jpg
+    - assets/images/mon/mon10.jpg
+    - assets/images/mon/mon11.jpg
+    - assets/images/mon/mon12.jpg
+    - assets/images/mdy/pag0.jpg
+    - assets/images/mdy/pag1.jpg
+    - assets/images/mdy/pag2.jpg
+    - assets/images/mdy/pag3.jpg
+    - assets/images/mdy/pag4.jpg
+    - assets/images/mdy/pag5.jpg
+    - assets/images/mdy/pag6.jpg
+    - assets/images/mdy/pag7.jpg
+    - assets/images/mdy/pag8.jpg
+    - assets/images/mdy/pag9.jpg
+    - assets/images/mdy/pag10.jpg
+    - assets/images/mdy/pag11.jpg
+    - assets/images/mdy/pag12.jpg
+    - assets/images/mdy/upein.jpg
+    - assets/images/mdy/mahar.jpg
+    - assets/images/mdy/mdyhill.jpg
+    - assets/images/mdy/shwenandaw.jpg
+    - assets/images/mdy/jade.jpg
+    - assets/images/mdy/palace.jpg
+    - assets/images/ygn/pago0.jpg
+    - assets/images/ygn/pago1.jpg
+    - assets/images/ygn/pago2.jpg
+    - assets/images/ygn/pago3.jpg
+    - assets/images/ygn/pago4.jpg
+    - assets/images/ygn/pago5.jpg
+    - assets/images/ygn/pago6.jpg
+    - assets/images/ygn/pago7.jpg
+    - assets/images/ygn/pago8.jpg
+    - assets/images/ygn/pago9.jpg
+    - assets/images/ygn/pago10.jpg
+    - assets/images/ygn/pago11.jpg
+    - assets/images/ygn/pago12.jpg
+    - assets/images/ygn/ygno.jpg
+    - assets/images/ygn/ygn1.jpg
+    - assets/images/ygn/ygn2.jpg
+    - assets/images/ygn/ygn3.jpg
+    - assets/images/ygn/ygn4.jpg
+    - assets/images/ygn/ygn5.jpg
+    - assets/images/ygn/ygn6.jpg
+    - assets/images/ygn/ygn7.jpg
+    - assets/images/ygn/ygn8.jpg
+    - assets/images/ygn/ygn10.jpg
+    - assets/images/ygn/ygn11.jpg
+    - assets/images/mon/kayon0.jpg
+    - assets/images/mon/kayon1.jpg
+    - assets/images/mon/kayon2.jpg
+    - assets/images/mon/kayon3.jpg
+    - assets/images/mon/kayon4.jpg
+    - assets/images/mon/kayon5.jpg
+    - assets/images/mon/kayon6.jpg
+    - assets/images/mon/kayon7.jpg
+    - assets/images/mon/kayon8.jpg
+    - assets/images/mon/kayon9.jpg
+    - assets/images/mon/kayon10.jpg
+    - assets/images/mon/kayon11.jpg
+    - assets/images/mon/kayon12.jpg
+    - assets/images/mon/kayon13.jpg
+    - assets/images/mon/phar0.jpg
+    - assets/images/mon/phar0.jpg
+    - assets/images/mon/phar1.jpg
+    - assets/images/mon/phar2.jpg
+    - assets/images/mon/phar3.jpg
+    - assets/images/mon/phar4.jpg
+    - assets/images/mon/phar6.jpg
+    - assets/images/mon/phar7.jpg
+    - assets/images/mon/phar8.jpg
+    - assets/images/mon/phar9.jpg
+    - assets/images/mon/phar10.jpg
+    - assets/images/mon/phar11.jpg
+    - assets/images/mon/phar12.jpg
+    - assets/images/mon/phar13.jpg
+    - assets/json/packages.json
+    
+ 
+
+ 
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
