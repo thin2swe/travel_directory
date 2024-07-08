@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:travel_directory/models/booking.dart';
 import 'package:travel_directory/models/package.dart';
 import 'package:travel_directory/Navbar.dart';
 import 'package:travel_directory/booking.dart';
@@ -89,7 +90,7 @@ class TourPackageRegionCard extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.to(TourDetailsScreen(package));
+                    Get.to(() => TourDetailsScreen(package));
                   },
                   child: Text(
                     "VIEW DETAIL",
@@ -109,7 +110,7 @@ class TourPackageRegionCard extends StatelessWidget {
                   child: MaterialButton(
                     minWidth: double.infinity,
                     height: 30,
-                    onPressed: () => Get.to(Booking()),
+                    onPressed: () => () {},
                     color: Color.fromARGB(255, 25, 173, 199),
                     elevation: 0,
                     shape: RoundedRectangleBorder(

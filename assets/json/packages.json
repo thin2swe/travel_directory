@@ -18,6 +18,7 @@
                     "rating": 4,
                     "imgPath": "assets/images/kayin/bayint.jpg",
                     "description": "Explore the captivating caves of Hpa An, including Yathaypyan Cave, Bat Cave, Mahar Sadan Cave, and Bayin Nyi Cave. Discover stunning stalactites, Buddha statues, and underground rivers in these natural wonders. This tour offers a unique blend of adventure and spirituality in Myanmar's picturesque Kayin State.",
+                    
                     "images": 
                     [
                        "assets/images/kayin/h1.jpg",
@@ -162,7 +163,7 @@
             "description": "Region description ",
             "regionPackages" : [
                 {
-                    "id": 1,                
+                    "id": 5,                
                     "title": "Shan State Highlights Tour",
                     "destination": "Shan",
                     "duration": "2 days",
@@ -199,7 +200,7 @@
                     ]
                 },
                 {
-                    "id": 2,                
+                    "id": 6,                
                     "title": "Heho-Taunggyi Cultural Expedition",
                     "destination": "Heho-Taunggyi",
                     "duration": "2 days",
@@ -233,7 +234,7 @@
                     ]
                 },
                 {
-                    "id": 3,                
+                    "id": 7,                
                     "title": "Limestone Marvels: Pindaya Cave",
                     "destination": "Limestone",
                     "duration": "1 days",
@@ -265,7 +266,7 @@
                     ]
                 },
                 {
-                    "id": 4,                
+                    "id": 8,                
                     "title": "Nan Mon Gyi Escape",
                     "destination": "Nan Mon Gyi",
                     "duration": "Day Trip",
@@ -309,7 +310,7 @@
             "description": "Region description",
             "regionPackages" : [
                 {
-                    "id": 1,                
+                    "id": 9,                
                     "title": "Mystic Mon Pagoda Journey",
                     "destination": "Mystic Mon Pagoda ",
                     "duration": "3 days",
@@ -348,7 +349,7 @@
                     ]
                 },
                 {
-                    "id": 2,                
+                    "id": 10,                
                     "title": "Artisans village of Mon State",
                     "destination": "Artisans ",
                     "duration": "1 days",
@@ -386,7 +387,7 @@
                 },
                 
                 {
-                    "id": 3,                
+                    "id": 11,                
                     "title": "Kayon Cave Nature Escape",
                     "destination": "Kayon Cave",
                     "duration": "1 days",
@@ -425,7 +426,7 @@
                     ]
                 },
                 {
-                    "id": 4,                
+                    "id": 12,                
                     "title": " Phar Baung Cave Excursion",
                     "destination": "Phar Baung Cave ",
                     "duration": "1 days",
@@ -471,7 +472,7 @@
             "description": "Region description",
             "regionPackages" : [
                 {
-                    "id": 1,                
+                    "id": 13,                
                     "title": "E Bike Tour in Bagan",
                     "destination": "E Bike Tour in Bagan ",
                     "duration": "1 days",
@@ -506,7 +507,7 @@
                     ]
                 },
                 {
-                    "id": 2,                
+                    "id": 14,                
                     "title": "Ancient Temples and Sacred Peaks",
                     "destination": "bahan",
                     "duration": "3 days",
@@ -551,7 +552,7 @@
             "description": "Region description",
             "regionPackages" : [
                 {
-                    "id": 1,                
+                    "id": 15,                
                     "title": "Pan Laung Serenity Stay",
                     "destination": "Pan Laung ",
                     "duration": "2 days",
@@ -588,7 +589,7 @@
                     ]
                 },
                 {
-                    "id": 2,                
+                    "id": 16,                
                     "title": "Sagaing Cultural Odyssey",
                     "destination": "Sagaing",
                     "duration": "1 days",
@@ -626,7 +627,7 @@
                     ]
                 },
                 {
-                    "id": 3,                
+                    "id": 17,                
                     "title": "Mandalay Majesty Tour",
                     "destination": "Mandalay",
                     "duration": "2 days",
@@ -663,7 +664,7 @@
                     ]
                 },
                 {
-                    "id": 4,                
+                    "id": 18,                
                     "title": "Pyin Oo Lwin Highland Escape",
                     "destination": "Pyin Oo Lwin",
                     "duration": "2 days",
@@ -711,7 +712,7 @@
             "description": "Region description",
             "regionPackages" : [
                 {
-                    "id": 1,                
+                    "id": 19,                
                     "title": "Yangon Cityscape Tour",
                     "destination": "Yangon Cityscape ",
                     "duration": " 2 days",
@@ -745,7 +746,7 @@
                     ]
                 },
                 {
-                    "id": 2,                
+                    "id": 20,                
                     "title": "Bago Heritage Trail",
                     "destination": "Bago Heritage Traily",
                     "duration": "2 days",

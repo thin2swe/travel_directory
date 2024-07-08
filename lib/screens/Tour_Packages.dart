@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:travel_directory/booking.dart';
 import 'package:travel_directory/models/package.dart';
 import 'package:travel_directory/home.dart';
 import 'package:travel_directory/models/user.dart';
@@ -64,6 +65,7 @@ class _TourPackages extends State<TourPackages> {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 15),
           Wrap(
             spacing: 8.0,
             children: List.generate(
@@ -147,7 +149,7 @@ class ItemListScreen extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             //Navigator.of(context).pop();
-            Get.to(HomePage());
+            Get.to(() => HomePage(0));
           },
         ),
       ),
@@ -222,7 +224,7 @@ class TourPackageCard extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.to(TourDetailsScreen(package));
+                      Get.to(() => TourDetailsScreen(package));
                     },
                     child: Text(
                       "VIEW DETAIL",
@@ -242,7 +244,7 @@ class TourPackageCard extends StatelessWidget {
                     child: MaterialButton(
                       minWidth: double.infinity,
                       height: 30,
-                      onPressed: () => {},
+                      onPressed: () => Get.to(() => BookingScreen(package)),
                       color: Color.fromARGB(255, 15, 180, 209),
                       elevation: 0,
                       shape: RoundedRectangleBorder(

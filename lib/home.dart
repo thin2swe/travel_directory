@@ -17,13 +17,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Smile Tour',
-      home: HomePage(),
+      home: HomePage(0),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  int index = 0;
+  HomePage(_index, {super.key}) {
+    index = _index;
+  }
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -41,6 +45,7 @@ class _HomePageState extends State<HomePage>
   void initState() {
     super.initState();
     _tabController = TabController(
+        initialIndex: widget.index,
         length: myTabs.length,
         vsync: this); // Length must match the number of tabs
   }
@@ -76,8 +81,10 @@ class _HomePageState extends State<HomePage>
         }).toList(),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            _tabController.animateTo((_tabController.index + 1) % 2),
+        onPressed: () => () {
+          _tabController.animateTo((_tabController.index + 1) % 2);
+          print("_tabController.index " + _tabController.index.toString());
+        },
         child: Icon(Icons.swap_horiz),
       ),
     );

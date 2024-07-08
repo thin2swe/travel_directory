@@ -64,7 +64,7 @@ class FirstPage extends StatelessWidget {
             ),
             SizedBox(height: 8),
             ElevatedButton(
-              onPressed: () => Get.to(LoginPage()),
+              onPressed: () => Get.to(() => LoginPage()),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 25, 173, 199),
               ),
@@ -72,7 +72,7 @@ class FirstPage extends StatelessWidget {
             ),
             SizedBox(height: 8),
             ElevatedButton(
-              onPressed: () => Get.to(SignupPage()),
+              onPressed: () => Get.to(() => SignupPage()),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 25, 173, 199),
               ),

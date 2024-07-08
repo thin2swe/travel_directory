@@ -57,16 +57,14 @@ class DatabaseHelper {
       conflictAlgorithm:
           ConflictAlgorithm.replace, // Conflict resolution strategy
     );
-    print("Inserted task: $task");
 // Debug: Print inserted task
   }
 
   // Get all tasks from the database
   Future<List<Map<String, dynamic>>> getTasks() async {
     final db = await database; // Get database instance
-    final List<Map<String, dynamic>> tasks =
-        await db.query('tasks'); // Query tasks table
-    print("Retrieved tasks: $tasks"); // Debug: Print retrieved tasks
+    final List<Map<String, dynamic>> tasks = await db
+        .query('tasks'); // Query tasks table// Debug: Print retrieved tasks
     return tasks; // Return retrieved tasks
   }
 
@@ -77,8 +75,7 @@ class DatabaseHelper {
       'tasks',
       where: 'id = ?',
       whereArgs: [id],
-    );
-    print("Deleted task with id: $id"); // Debug: Print deleted task ID
+    ); // Debug: Print deleted task ID
   }
   // end Tasks
 

@@ -36,7 +36,7 @@ class AboutUsPage extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             //Navigator.of(context).pop();
-            Get.to(HomePage());
+            Get.to(() => HomePage(0));
           },
         ),
       ),

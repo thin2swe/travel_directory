@@ -22,7 +22,6 @@ List<Package> allPackages(String str) {
       packList.add(ele);
     });
   });
-  print("Length: ${packList.length}");
   return packList;
 }
 
@@ -34,7 +33,6 @@ List<String> getRegions(String str) {
   regions.forEach((element) {
     regionsList.add(element.region);
   });
-  print(regionsList.toString());
   return regionsList;
 }
 

@@ -160,42 +160,42 @@ class TourDetailsScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 24),
-            Center(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 25, 173, 199),
-                  padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) => AlertDialog(
-                      title: Text('Booking Confirmation'),
-                      content: Text('Your trip has been booked!'),
-                      actions: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: Text('OK'),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-                child: Text(
-                  'Book This Trip',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
+            // Center(
+            //   child: ElevatedButton(
+            //     style: ElevatedButton.styleFrom(
+            //       backgroundColor: Color.fromARGB(255, 25, 173, 199),
+            //       padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+            //       shape: RoundedRectangleBorder(
+            //         borderRadius: BorderRadius.circular(16),
+            //       ),
+            //     ),
+            //     onPressed: () {
+            //       showDialog(
+            //         context: context,
+            //         builder: (BuildContext context) => AlertDialog(
+            //           title: Text('Booking Confirmation'),
+            //           content: Text('Your trip has been booked!'),
+            //           actions: [
+            //             TextButton(
+            //               onPressed: () {
+            //                 Navigator.of(context).pop();
+            //               },
+            //               child: Text('OK'),
+            //             ),
+            //           ],
+            //         ),
+            //       );
+            //     },
+            //     child: Text(
+            //       'Book This Trip',
+            //       style: TextStyle(
+            //         fontSize: 18,
+            //         fontWeight: FontWeight.bold,
+            //         color: Colors.white,
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

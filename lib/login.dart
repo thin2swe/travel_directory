@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                               controller.check(
                                   nameCtrl.text, passwordCtrl.text);
                               if (controller.user.value != null) {
-                                Get.to(HomePage());
+                                Get.to(() => HomePage(0));
                               }
                             },
                             color: Color.fromARGB(255, 25, 173, 199),
@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                         Text("Don't have an account? "),
                         GestureDetector(
                           onTap: () {
-                            Get.to(SignupPage());
+                            Get.to(() => SignupPage());
                           },
                           child: Text(
                             "Sign up",

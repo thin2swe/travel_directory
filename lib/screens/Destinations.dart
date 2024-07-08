@@ -27,14 +27,12 @@ class _Destinations extends State<Destinations> {
         await rootBundle.loadString('assets/json/packages.json');
     Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {
           regions = RegionFromJson(response);
-          print(regions);
         }));
 
     final String responseState =
         await rootBundle.loadString('assets/json/states.json');
     Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {
           regionDetails = RegionDetailFromJson(responseState);
-          print("region ==> " + regions.length.toString());
         }));
   }
 

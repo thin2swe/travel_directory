@@ -14,7 +14,6 @@ class RegionDetailScreen extends StatefulWidget {
     for (var i = 0; i < regions.length; i++) {
       if (regions[i].region == region) {
         displayRegion = regions[i];
-        print("displayRegion ==> " + displayRegion.toJson().toString());
         break;
       }
     }

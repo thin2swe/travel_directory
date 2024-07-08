@@ -16,12 +16,14 @@ class LoginController extends GetxController {
     var sessionManager = SessionManager();
     if (newUser.id != 0) {
       sessionManager.set("name", newUser.userName);
+      sessionManager.set("userId", newUser.id);
       if (newUser.email != null) {
         sessionManager.set("email", newUser.email);
       } else {
         sessionManager.set("email", "");
       }
     } else {
+      sessionManager.set("userId", 0);
       sessionManager.set("name", "");
       sessionManager.set("email", "");
     }
