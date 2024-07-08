@@ -10,10 +10,16 @@ void main() {
   runApp(GetMaterialApp(home: LoginPage()));
 }
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final LoginController controller = Get.put(LoginController());
   final nameCtrl = TextEditingController();
   final passwordCtrl = TextEditingController();
+  bool isPasswordVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -81,9 +87,15 @@ class LoginPage extends StatelessWidget {
                             duration: Duration(milliseconds: 1300),
                             child: makeInput(
                                 label: "Password",
-                                obscureText: true,
+                                obscureText: !isPasswordVisible,
                                 ctrl: passwordCtrl,
-                                icon: Icon(Icons.lock))),
+                                icon: Icon(Icons.lock),
+                                togglePasswordVisibility: () {
+                                  setState(() {
+                                    isPasswordVisible = !isPasswordVisible;
+                                  });
+                                },
+                                isPasswordVisible: isPasswordVisible)),
                       ],
                     ),
                   ),
@@ -138,8 +150,7 @@ class LoginPage extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
-                              color: Colors
-                                  .blue, // Optionally, you can set the color of the link
+                              color: Colors.blue,
                             ),
                           ),
                         ),
@@ -156,7 +167,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/logo_1.gif'),
-                    fit: BoxFit.contain, // Change fit to BoxFit.contain
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -164,6 +175,50 @@ class LoginPage extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget makeInput({
+    required String label,
+    bool obscureText = false,
+    required TextEditingController ctrl,
+    required Icon icon,
+    VoidCallback? togglePasswordVisibility,
+    bool? isPasswordVisible,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        SizedBox(
+          height: 5,
+        ),
+        TextField(
+          controller: ctrl,
+          obscureText: obscureText,
+          decoration: InputDecoration(
+            labelText: label,
+            floatingLabelBehavior: FloatingLabelBehavior.auto,
+            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+            prefixIcon: icon,
+            suffixIcon: togglePasswordVisibility != null
+                ? IconButton(
+                    icon: Icon(isPasswordVisible!
+                        ? Icons.visibility
+                        : Icons.visibility_off),
+                    onPressed: togglePasswordVisibility,
+                  )
+                : null,
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.grey.shade400),
+            ),
+            border: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey.shade400)),
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+      ],
     );
   }
 }

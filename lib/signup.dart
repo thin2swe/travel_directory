@@ -10,16 +10,22 @@ void main() {
   runApp(GetMaterialApp(home: SignupPage()));
 }
 
-class SignupPage extends StatelessWidget {
+class SignupPage extends StatefulWidget {
+  @override
+  _SignupPageState createState() => _SignupPageState();
+}
+
+class _SignupPageState extends State<SignupPage> {
   final nameCtrl = TextEditingController();
   final displayNameCtrl = TextEditingController();
   final passwordCtrl = TextEditingController();
   final confirmPassCtrl = TextEditingController();
   final emailCtrl = TextEditingController();
   final phoneCtrl = TextEditingController();
-
-  final SingupController controller = Get.put(SingupController());
-  //User user = User(userName: '', password: '');
+  final SignupController controller = Get.put(SignupController());
+  String errorMessage = '';
+  bool isPasswordVisible = false;
+  bool isConfirmPasswordVisible = false;
 
   User mapToUser(
       TextEditingController name,
@@ -32,6 +38,21 @@ class SignupPage extends StatelessWidget {
         password: pass.text,
         email: email.text,
         phone: phone.text);
+  }
+
+  void registerUser(BuildContext context) {
+    if (passwordCtrl.text != confirmPassCtrl.text) {
+      setState(() {
+        errorMessage = 'Password and Confirm Password do not match';
+      });
+    } else {
+      setState(() {
+        errorMessage = '';
+      });
+      controller.register(mapToUser(
+          nameCtrl, displayNameCtrl, passwordCtrl, emailCtrl, phoneCtrl));
+      Get.to(LoginPage());
+    }
   }
 
   @override
@@ -78,7 +99,7 @@ class SignupPage extends StatelessWidget {
                   FadeInUp(
                       duration: Duration(milliseconds: 1200),
                       child: Text(
-                        "Create an account, It's free !",
+                        "Create an account, It's free!",
                         style: TextStyle(fontSize: 15, color: Colors.grey[700]),
                       )),
                 ],
@@ -95,16 +116,29 @@ class SignupPage extends StatelessWidget {
                       duration: Duration(milliseconds: 1300),
                       child: makeInput(
                           label: "Password",
-                          obscureText: true,
+                          obscureText: !isPasswordVisible,
                           ctrl: passwordCtrl,
-                          icon: Icon(Icons.lock))),
+                          icon: Icon(Icons.lock),
+                          togglePasswordVisibility: () {
+                            setState(() {
+                              isPasswordVisible = !isPasswordVisible;
+                            });
+                          },
+                          isPasswordVisible: isPasswordVisible)),
                   FadeInUp(
                       duration: Duration(milliseconds: 1400),
                       child: makeInput(
                           label: "Confirm Password",
-                          obscureText: true,
+                          obscureText: !isConfirmPasswordVisible,
                           ctrl: confirmPassCtrl,
-                          icon: Icon(Icons.lock))),
+                          icon: Icon(Icons.lock),
+                          togglePasswordVisibility: () {
+                            setState(() {
+                              isConfirmPasswordVisible =
+                                  !isConfirmPasswordVisible;
+                            });
+                          },
+                          isPasswordVisible: isConfirmPasswordVisible)),
                   FadeInUp(
                       duration: Duration(milliseconds: 1300),
                       child: makeInput(
@@ -119,6 +153,19 @@ class SignupPage extends StatelessWidget {
                           icon: Icon(Icons.phone))),
                 ],
               ),
+              if (errorMessage.isNotEmpty)
+                FadeInUp(
+                  duration: Duration(milliseconds: 1500),
+                  child: SizedBox(
+                    height: 30,
+                    child: Center(
+                      child: Text(
+                        errorMessage,
+                        style: TextStyle(color: Colors.red, fontSize: 14),
+                      ),
+                    ),
+                  ),
+                ),
               FadeInUp(
                   duration: Duration(milliseconds: 1500),
                   child: Container(
@@ -134,11 +181,7 @@ class SignupPage extends StatelessWidget {
                     child: MaterialButton(
                       minWidth: double.infinity,
                       height: 10,
-                      onPressed: () {
-                        controller.register(mapToUser(nameCtrl, displayNameCtrl,
-                            passwordCtrl, emailCtrl, phoneCtrl));
-                        Get.to(LoginPage());
-                      },
+                      onPressed: () => registerUser(context),
                       color: Color.fromARGB(255, 25, 173, 199),
                       elevation: 0,
                       shape: RoundedRectangleBorder(
@@ -155,7 +198,7 @@ class SignupPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text("Already have an account ! "),
+                    Text("Already have an account! "),
                     GestureDetector(
                       onTap: () {
                         Get.to(LoginPage());
@@ -176,6 +219,49 @@ class SignupPage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Widget makeInput(
+      {required String label,
+      bool obscureText = false,
+      required TextEditingController ctrl,
+      required Icon icon,
+      VoidCallback? togglePasswordVisibility,
+      bool? isPasswordVisible}) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        SizedBox(
+          height: 5,
+        ),
+        TextField(
+          controller: ctrl,
+          obscureText: obscureText,
+          decoration: InputDecoration(
+            labelText: label,
+            floatingLabelBehavior: FloatingLabelBehavior.auto,
+            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+            prefixIcon: icon,
+            suffixIcon: togglePasswordVisibility != null
+                ? IconButton(
+                    icon: Icon(isPasswordVisible!
+                        ? Icons.visibility
+                        : Icons.visibility_off),
+                    onPressed: togglePasswordVisibility,
+                  )
+                : null,
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.grey.shade400),
+            ),
+            border: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey.shade400)),
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+      ],
     );
   }
 }

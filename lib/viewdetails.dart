@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:travel_directory/DATA/package.dart';
+import 'package:travel_directory/models/package.dart';
 import 'package:travel_directory/Navbar.dart';
 
 class TourDetailsScreen extends StatelessWidget {

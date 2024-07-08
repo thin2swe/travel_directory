@@ -1,12 +1,9 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
-import 'package:travel_directory/DATA/package.dart';
-import 'package:travel_directory/screens/Details.dart';
-import 'package:travel_directory/screens/Tour_Packages.dart';
-import 'package:travel_directory/screens/package_by_region.dart';
+import 'package:travel_directory/models/package.dart';
+import 'package:travel_directory/models/regionmodel.dart';
+import 'package:travel_directory/screens/region_detail.dart';
 
 class Destinations extends StatefulWidget {
   const Destinations({Key? key}) : super(key: key);
@@ -17,6 +14,7 @@ class Destinations extends StatefulWidget {
 
 class _Destinations extends State<Destinations> {
   List<Region> regions = [];
+  List<RegionDetail> regionDetails = [];
 
   @override
   void initState() {
@@ -30,6 +28,13 @@ class _Destinations extends State<Destinations> {
     Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {
           regions = RegionFromJson(response);
           print(regions);
+        }));
+
+    final String responseState =
+        await rootBundle.loadString('assets/json/states.json');
+    Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {
+          regionDetails = RegionDetailFromJson(responseState);
+          print("region ==> " + regions.length.toString());
         }));
   }
 
@@ -71,9 +76,8 @@ class _Destinations extends State<Destinations> {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => TourPackagesByRegion(
-                                regions[index].regionPackages,
-                              ),
+                              builder: (context) => RegionDetailScreen(
+                                  regions[index].region, regionDetails),
                             ),
                           ),
                           child: Stack(

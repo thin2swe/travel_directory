@@ -12,12 +12,19 @@ class User {
       this.email,
       this.phone});
 
+  static User empty =
+      User(id: 0, userName: "", password: "", email: "", phone: "");
+
   User.map(dynamic obj) {
-    this.id = obj['id'];
-    this.userName = obj['userName'];
-    this.password = obj['password'];
-    this.email = obj['email'];
-    this.phone = obj['phone'];
+    if (obj != null) {
+      this.id = obj['id'];
+      this.userName = obj['userName'];
+      this.password = obj['password'];
+      this.email = obj['email'];
+      this.phone = obj['phone'];
+    } else {
+      User.empty;
+    }
   }
 
   Map<String, dynamic> toMap() {

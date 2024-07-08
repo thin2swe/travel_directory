@@ -155,7 +155,6 @@
                 }
             ]  
         },
-    
         {
             "region": "SHAN",
             "img": "assets/images/shan/shanshan.jpg",
@@ -465,10 +464,6 @@
                 }
             ]
         },
-
-        
-
-
         {
             "region": "BAGAN",
             "img": "assets/images/bagan/bagan.jpg",
@@ -549,7 +544,6 @@
                 }               
             ]
         },
-
         {
             "region": "MANDALAY",
             "img": "assets/images/mdy/mdy4.jpg",

@@ -349,6 +349,7 @@ flutter:
     - assets/images/mon/phar12.jpg
     - assets/images/mon/phar13.jpg
     - assets/json/packages.json
+    - assets/json/states.json
     
  
 

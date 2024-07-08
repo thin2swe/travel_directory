@@ -14,8 +14,17 @@ class LoginController extends GetxController {
   void updateUser(User newUser) {
     user.value = newUser;
     var sessionManager = SessionManager();
-    sessionManager.set("name", newUser.userName);
-    sessionManager.set("email", newUser.email!);
+    if (newUser.id != 0) {
+      sessionManager.set("name", newUser.userName);
+      if (newUser.email != null) {
+        sessionManager.set("email", newUser.email);
+      } else {
+        sessionManager.set("email", "");
+      }
+    } else {
+      sessionManager.set("name", "");
+      sessionManager.set("email", "");
+    }
   }
 
   void check(String name, String password) async {

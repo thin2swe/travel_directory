@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:travel_directory/database/database_helper.dart';
-
 import 'controller/review_controller.dart';
 import 'models/review.dart';
 
@@ -33,8 +32,6 @@ class _ReviewPageState extends State<ReviewPage> {
   double _rating = 0.0;
 
   final ReviewController controller = Get.put(ReviewController());
-  //Review review = Review(name: '', review: '', rating: 0.0);
-
   final DatabaseHelper _dbHelper = DatabaseHelper();
 
   Review mapToReview(
@@ -77,19 +74,30 @@ class _ReviewPageState extends State<ReviewPage> {
   Widget build(BuildContext context) {
     return Obx(() {
       return Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: <Widget>[
-              SingleChildScrollView(
-                child: Form(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Submit Your Review',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 25, 173, 199),
+                  ),
+                ),
+                SizedBox(height: 16),
+                Form(
                   key: _formKey,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       TextFormField(
                         controller: _nameController,
                         decoration: InputDecoration(
-                          labelText: ' Name',
+                          labelText: 'Name',
                           labelStyle: TextStyle(
                             color: Color.fromARGB(255, 25, 173, 199),
                           ),
@@ -110,7 +118,7 @@ class _ReviewPageState extends State<ReviewPage> {
                       TextFormField(
                         controller: _reviewController,
                         decoration: InputDecoration(
-                          labelText: ' Review',
+                          labelText: 'Review',
                           labelStyle: TextStyle(
                               color: Color.fromARGB(255, 25, 173, 199)),
                           border: OutlineInputBorder(),
@@ -129,7 +137,7 @@ class _ReviewPageState extends State<ReviewPage> {
                       ),
                       SizedBox(height: 16),
                       Text(
-                        ' Rating',
+                        'Rating',
                         style: TextStyle(
                             color: Color.fromARGB(255, 25, 173, 199),
                             fontSize: 16),
@@ -165,22 +173,23 @@ class _ReviewPageState extends State<ReviewPage> {
                     ],
                   ),
                 ),
-              ),
-              Divider(),
-              Text(
-                'Total Submitted Reviews :  ${controller.rewiews.length}',
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-              Expanded(
-                child: controller.rewiews.value.length < 1
+                Divider(),
+                Text(
+                  'Total Submitted Reviews:  ${controller.rewiews.length}',
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+                SizedBox(height: 16),
+                controller.rewiews.value.length < 1
                     ? Center(
                         child: Text('No reviews submitted yet',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 25, 173, 199))))
                     : ListView.builder(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
                         itemCount: controller.rewiews.length,
                         itemBuilder: (context, index) {
                           final review = controller.rewiews[index];
@@ -210,8 +219,8 @@ class _ReviewPageState extends State<ReviewPage> {
                           );
                         },
                       ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       );

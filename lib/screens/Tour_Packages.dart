@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:travel_directory/DATA/package.dart';
+import 'package:travel_directory/models/package.dart';
 import 'package:travel_directory/home.dart';
 import 'package:travel_directory/models/user.dart';
 import 'package:travel_directory/viewdetails.dart';

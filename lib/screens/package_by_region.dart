@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:travel_directory/DATA/package.dart';
+import 'package:travel_directory/models/package.dart';
 import 'package:travel_directory/Navbar.dart';
 import 'package:travel_directory/booking.dart';
 import 'package:travel_directory/viewdetails.dart';
