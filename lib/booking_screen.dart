@@ -20,8 +20,8 @@ class TourBookingForm extends StatefulWidget {
 class _TourBookingFormState extends State<TourBookingForm> {
   final _formKey = GlobalKey<FormState>();
   String? _tourType;
-  DateTime? _expectedDate;
-  int _adults = 0;
+  DateTime _expectedDate = DateTime.now();
+  int _adults = 1;
   int _children = 0;
   String _specialRequest = '';
   String _name = '';
@@ -31,7 +31,6 @@ class _TourBookingFormState extends State<TourBookingForm> {
   final BookingController ctrl = Get.put(BookingController());
   Booking booking = Booking.emptyBooking;
   int userId = 0;
-
   @override
   void initState() {
     super.initState();
@@ -102,6 +101,23 @@ class _TourBookingFormState extends State<TourBookingForm> {
                 ),
               ),
               SizedBox(height: 20),
+              _buildNumberField(
+                label: 'Number of Adults ',
+                onChanged: (value) {
+                  setState(() {
+                    _adults = int.parse(value);
+                  });
+                },
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter the number of adults';
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: 20),
+              _buildDateField(),
+              SizedBox(height: 20),
               Container(
                 constraints: BoxConstraints(
                   minHeight: 40,
@@ -112,7 +128,7 @@ class _TourBookingFormState extends State<TourBookingForm> {
                   minWidth: double.infinity,
                   height: 30,
                   onPressed: () {
-                    ctrl.book();
+                    ctrl.book(_adults, _expectedDate);
                     Get.to(() => HomePage(1));
                   },
                   color: Color.fromARGB(255, 15, 180, 209),
@@ -163,20 +179,7 @@ class _TourBookingFormState extends State<TourBookingForm> {
                   SizedBox(height: 12),
                   _buildDateField(),
                   SizedBox(height: 16),
-                  _buildNumberField(
-                    label: 'Number of Adults ',
-                    onChanged: (value) {
-                      setState(() {
-                        _adults = int.parse(value);
-                      });
-                    },
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter the number of adults';
-                      }
-                      return null;
-                    },
-                  ),
+                  
                   SizedBox(height: 16),
                   _buildNumberField(
                     label: 'Number of Children (Age below 12)',
@@ -340,6 +343,7 @@ class _TourBookingFormState extends State<TourBookingForm> {
     String? Function(String?)? validator,
   }) {
     return TextFormField(
+      initialValue: "1",
       decoration: InputDecoration(
         labelText: label,
       ),

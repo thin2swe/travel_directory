@@ -13,7 +13,9 @@ class BookingController extends GetxController {
     super.onInit();
   }
 
-  void book() async {
+  void book(int num, DateTime date) async {
+    booking.value.noOfPerson = num;
+    booking.value.bookingDate = date.toIso8601String();
     await DatabaseHelper().insertBooking(booking.value);
   }
 }

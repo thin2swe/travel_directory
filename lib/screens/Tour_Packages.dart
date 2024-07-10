@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:travel_directory/booking_screen.dart';
 import 'package:travel_directory/models/package.dart';
 import 'package:travel_directory/home.dart';
@@ -166,6 +167,10 @@ class ItemListScreen extends StatelessWidget {
 class TourPackageCard extends StatelessWidget {
   final Package package;
   TourPackageCard({Key? key, required this.package}) : super(key: key);
+  NumberFormat formatter = NumberFormat.decimalPatternDigits(
+    locale: 'en_us',
+    decimalDigits: 2,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -205,7 +210,7 @@ class TourPackageCard extends StatelessWidget {
                   ),
                   Text(package.duration),
                   Text(
-                    "\$" + package.price.toString(),
+                    "\MMK ${formatter.format(package.price)}",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
