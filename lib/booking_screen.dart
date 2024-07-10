@@ -22,36 +22,33 @@ class _TourBookingFormState extends State<TourBookingForm> {
   String? _tourType;
   DateTime _expectedDate = DateTime.now();
   int _adults = 1;
-  int _children = 0;
-  String _specialRequest = '';
-  String _name = '';
-  String _email = '';
-  String _phone = '';
 
   final BookingController ctrl = Get.put(BookingController());
   Booking booking = Booking.emptyBooking;
   int userId = 0;
+
   @override
   void initState() {
     super.initState();
-  }
-
-  _TourBookingFormState() {
     loadUser();
   }
 
   void loadUser() async {
     userId = await SessionManager().get("userId");
-    print("userId =====================> ${userId}");
+    print("userId =====================> $userId");
     ctrl.booking.value = Booking.mapWithPackage(widget.pack, userId);
+  }
+
+  double calculateTotalPrice() {
+    return _adults * widget.pack.price;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Smile Tour'),
-        backgroundColor: Color.fromARGB(255, 25, 173, 199),
+        title: Text('Tour Booking'),
+        backgroundColor: Color.fromARGB(255, 15, 180, 209),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -61,250 +58,125 @@ class _TourBookingFormState extends State<TourBookingForm> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                widget.pack.title,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Duration : ${widget.pack.duration}",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Price : ${widget.pack.price}",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: List.generate(
-                  5,
-                  (idx) => Icon(
-                    Icons.star,
-                    size: 20,
-                    color:
-                        idx < widget.pack.rating ? Colors.yellow : Colors.grey,
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              _buildNumberField(
-                label: 'Number of Adults ',
-                onChanged: (value) {
-                  setState(() {
-                    _adults = int.parse(value);
-                  });
-                },
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter the number of adults';
-                  }
-                  return null;
-                },
-              ),
-              SizedBox(height: 20),
-              _buildDateField(),
-              SizedBox(height: 20),
-              Container(
-                constraints: BoxConstraints(
-                  minHeight: 40,
-                ),
-                alignment: Alignment.bottomLeft,
-                width: 100,
-                child: MaterialButton(
-                  minWidth: double.infinity,
-                  height: 30,
-                  onPressed: () {
-                    ctrl.book(_adults, _expectedDate);
-                    Get.to(() => HomePage(1));
-                  },
-                  color: Color.fromARGB(255, 15, 180, 209),
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Text(
-                    "BOOK NOW",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-
-    /*
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Smile Tour'),
-        backgroundColor: Color.fromARGB(255, 25, 173, 199),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: SingleChildScrollView(
-          padding: EdgeInsets.all(15.0),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text("Tour Booking Form"),
-            SizedBox(height: 16),
-            Form(
-              key: _formKey,
-              child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+          child: Card(
+            elevation: 8,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(widget.pack.title),
-                  SizedBox(height: 12),
-                  Text("Duration: ${widget.pack.duration} days"),
-                  SizedBox(height: 12),
-                  Text("Price: ${widget.pack.price} days"),
-                  SizedBox(height: 12),
-                  _buildDateField(),
-                  SizedBox(height: 16),
-                  
-                  SizedBox(height: 16),
-                  _buildNumberField(
-                    label: 'Number of Children (Age below 12)',
-                    onChanged: (value) {
-                      setState(() {
-                        _children = int.parse(value);
-                      });
-                    },
-                  ),
-                  SizedBox(height: 16),
-                  _buildDropdownField(
-                    label: 'Tour Type ',
-                    items: ['Taunggyi', 'Inlay', 'Kalaw'],
-                    onChanged: (value) {
-                      setState(() {
-                        _tourType = value;
-                      });
-                    },
-                    validator: (value) {
-                      if (value == null) {
-                        return 'Please select a tour type';
-                      }
-                      return null;
-                    },
-                  ),
-                  SizedBox(height: 16),
-                  _buildTextField(
-                    label: 'Special Request (maximum 200 characters)',
-                    maxLines: 3,
-                    maxLength: 200,
-                    onChanged: (value) {
-                      setState(() {
-                        _specialRequest = value;
-                      });
-                    },
-                  ),
-                  SizedBox(height: 16),
                   Text(
-                    'Contact Information',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    widget.pack.title,
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  SizedBox(height: 16),
-                  _buildTextField(
-                    label: 'Name ',
-                    onChanged: (value) {
-                      setState(() {
-                        _name = value;
-                      });
-                    },
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your name';
-                      }
-                      return null;
-                    },
+                  SizedBox(height: 10),
+                  Text(
+                    "Duration: ${widget.pack.duration}",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                  SizedBox(height: 16),
-                  _buildTextField(
-                    label: 'E-Mail ',
-                    keyboardType: TextInputType.emailAddress,
-                    onChanged: (value) {
-                      setState(() {
-                        _email = value;
-                      });
-                    },
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
-                      }
-                      return null;
-                    },
+                  SizedBox(height: 10),
+                  Text(
+                    "Price: ${widget.pack.price}",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                  SizedBox(height: 16),
-                  _buildTextField(
-                    label: 'Phone Number ',
-                    keyboardType: TextInputType.phone,
-                    onChanged: (value) {
-                      setState(() {
-                        _phone = value;
-                      });
-                    },
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your phone number';
-                      }
-                      return null;
-                    },
+                  SizedBox(height: 10),
+                  Row(
+                    children: List.generate(
+                      5,
+                      (idx) => Icon(
+                        Icons.star,
+                        size: 20,
+                        color: idx < widget.pack.rating
+                            ? Colors.yellow
+                            : Colors.grey,
+                      ),
+                    ),
                   ),
-                  SizedBox(height: 24),
-                  ElevatedButton(
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) => AlertDialog(
-                            title: Text('Booking Confirmation'),
-                            content: Text('Your trip has been booked!'),
-                            actions: [
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                                child: Text('OK'),
-                              ),
-                            ],
+                  SizedBox(height: 20),
+                  Form(
+                    key: _formKey,
+                    child: Column(
+                      children: [
+                        _buildNumberField(
+                          label: 'Number of Adults',
+                          onChanged: (value) {
+                            setState(() {
+                              _adults = int.parse(value);
+                            });
+                          },
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter the number of adults';
+                            }
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: 20),
+                        _buildDateField(),
+                        SizedBox(height: 20),
+                        Text(
+                          "Total Amount: ${calculateTotalPrice()}",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
                           ),
-                        );
-                      }
-                    },
-                    child: Text('Submit'),
+                        ),
+                        SizedBox(height: 20),
+                        Container(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              padding: EdgeInsets.symmetric(vertical: 16.0),
+                              backgroundColor:
+                                  Color.fromARGB(255, 15, 180, 209),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                            ),
+                            onPressed: () {
+                              if (_formKey.currentState!.validate()) {
+                                ctrl.book(_adults, _expectedDate);
+                                Get.to(() => HomePage(1));
+                              }
+                            },
+                            child: Text(
+                              "BOOK NOW",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-          ]),
+          ),
         ),
       ),
     );
-    */
   }
 
   Widget _buildDateField() {
     return TextFormField(
       decoration: InputDecoration(
-        labelText: 'Expected Date of Arrival ',
+        labelText: 'Expected Date of Arrival',
         suffixIcon: IconButton(
           icon: Icon(Icons.calendar_today),
           onPressed: () async {
@@ -332,7 +204,7 @@ class _TourBookingFormState extends State<TourBookingForm> {
       controller: TextEditingController(
         text: _expectedDate == null
             ? ''
-            : '${_expectedDate!.toLocal()}'.split(' ')[0],
+            : '${_expectedDate.toLocal()}'.split(' ')[0],
       ),
     );
   }
@@ -346,51 +218,13 @@ class _TourBookingFormState extends State<TourBookingForm> {
       initialValue: "1",
       decoration: InputDecoration(
         labelText: label,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
       ),
       keyboardType: TextInputType.number,
       validator: validator,
       onChanged: onChanged,
-    );
-  }
-
-  Widget _buildDropdownField({
-    required String label,
-    required List<String> items,
-    required Function(String?) onChanged,
-    String? Function(String?)? validator,
-  }) {
-    return DropdownButtonFormField<String>(
-      decoration: InputDecoration(
-        labelText: label,
-      ),
-      items: items
-          .map((label) => DropdownMenuItem(
-                child: Text(label),
-                value: label,
-              ))
-          .toList(),
-      onChanged: onChanged,
-      validator: validator,
-    );
-  }
-
-  Widget _buildTextField({
-    required String label,
-    int maxLines = 1,
-    int maxLength = 100,
-    TextInputType keyboardType = TextInputType.text,
-    required Function(String) onChanged,
-    String? Function(String?)? validator,
-  }) {
-    return TextFormField(
-      decoration: InputDecoration(
-        labelText: label,
-      ),
-      maxLines: maxLines,
-      maxLength: maxLength,
-      keyboardType: keyboardType,
-      onChanged: onChanged,
-      validator: validator,
     );
   }
 }
