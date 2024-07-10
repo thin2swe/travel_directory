@@ -1,5 +1,6 @@
 import 'package:sqflite/sqflite.dart'; // Import sqflite package
 import 'package:path/path.dart';
+import 'package:travel_directory/models/booking.dart';
 import 'package:travel_directory/models/review.dart';
 import 'package:travel_directory/models/user.dart'; // Import path package
 
@@ -35,6 +36,9 @@ class DatabaseHelper {
         );
         await db.execute(
           "CREATE TABLE reviews(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, review TEXT, rating REAL);",
+        );
+        await db.execute(
+          "CREATE TABLE bookings(id INTEGER PRIMARY KEY AUTOINCREMENT, package_id INTEGER, user_id INTEGER, price NUMERIC, no_of_person INTEGER, booking_date TEXT);",
         );
       },
       // onUpgrade: (db, oldVersion, newVersion) async {
@@ -141,6 +145,16 @@ class DatabaseHelper {
       'reviews',
       where: 'id = ?',
       whereArgs: [id],
+    );
+  }
+
+  Future<void> insertBooking(Booking booking) async {
+    final db = await database;
+    await db.insert(
+      'bookings',
+      booking.toMap(),
+      conflictAlgorithm:
+          ConflictAlgorithm.replace, // Conflict resolution strategy
     );
   }
 }

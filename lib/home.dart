@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:travel_directory/Navbar.dart';
-
 import 'package:travel_directory/reviews_screen.dart';
 import 'package:travel_directory/screens/Destinations.dart';
-
 import 'package:travel_directory/screens/Tour_Packages.dart';
 
 void main() {

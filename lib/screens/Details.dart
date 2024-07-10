@@ -4,7 +4,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:travel_directory/DATA/tour_packages.dart';
+import 'package:travel_directory/models/package.dart';
 
 class PlaceDetails extends StatefulWidget {
   final String? name, img, description;
@@ -140,7 +140,7 @@ class _PlaceDetailsState extends State<PlaceDetails> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
-                                widget.packages[index].region,
+                                widget.packages[index].title,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: 'QuickKiss',

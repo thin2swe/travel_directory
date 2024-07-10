@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:travel_directory/controller/singup_controller.dart';
 import 'package:travel_directory/login.dart';
 import 'package:travel_directory/models/user.dart';
-import 'package:travel_directory/widgets/text_field.dart';
 
 void main() {
   runApp(GetMaterialApp(home: SignupPage()));
@@ -22,7 +21,7 @@ class _SignupPageState extends State<SignupPage> {
   final confirmPassCtrl = TextEditingController();
   final emailCtrl = TextEditingController();
   final phoneCtrl = TextEditingController();
-  final SignupController controller = Get.put(SignupController());
+  final SingupController controller = Get.put(SingupController());
   String errorMessage = '';
   bool isPasswordVisible = false;
   bool isConfirmPasswordVisible = false;
@@ -51,7 +50,7 @@ class _SignupPageState extends State<SignupPage> {
       });
       controller.register(mapToUser(
           nameCtrl, displayNameCtrl, passwordCtrl, emailCtrl, phoneCtrl));
-      Get.to(LoginPage());
+      Get.to(() => LoginPage());
     }
   }
 
@@ -201,7 +200,7 @@ class _SignupPageState extends State<SignupPage> {
                     Text("Already have an account! "),
                     GestureDetector(
                       onTap: () {
-                        Get.to(LoginPage());
+                        Get.to(() => LoginPage());
                       },
                       child: Text(
                         "Login",
