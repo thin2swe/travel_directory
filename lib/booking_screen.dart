@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart'; // Import the intl package
 import 'package:travel_directory/controller/booking_controller.dart';
 import 'package:travel_directory/home.dart';
 import 'package:travel_directory/models/booking.dart';
@@ -41,6 +42,16 @@ class _TourBookingFormState extends State<TourBookingForm> {
 
   double calculateTotalPrice() {
     return _adults * widget.pack.price;
+  }
+
+  String formatPrice(double price) {
+    NumberFormat formatter = NumberFormat.currency(
+      locale: 'en_US',
+      //symbol: '\$',
+      symbol: 'MMK ',
+      decimalDigits: 2,
+    );
+    return formatter.format(price);
   }
 
   @override
@@ -86,7 +97,7 @@ class _TourBookingFormState extends State<TourBookingForm> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "Price: ${widget.pack.price}",
+                    "Price: ${formatPrice(widget.pack.price)}",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -128,7 +139,7 @@ class _TourBookingFormState extends State<TourBookingForm> {
                         _buildDateField(),
                         SizedBox(height: 20),
                         Text(
-                          "Total Amount: ${calculateTotalPrice()}",
+                          "Total Amount: ${formatPrice(calculateTotalPrice())}",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
